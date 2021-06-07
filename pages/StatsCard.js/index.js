@@ -10,7 +10,8 @@ const Components = () => {
         experience, and overall efficiency."
         threeCol={
           ["10k+ companies","314 templates", "12mil+ queries"]
-        }/>
+        }
+        image="/images/image-header-desktop.jpg"/>
     </div>
   )
 }
