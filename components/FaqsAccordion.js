@@ -12,34 +12,36 @@ const FaqsAccordion = () => {
     } else {
       setSelected(index)
     }
-
-   
   }
+
+  const bgGradient = {backgroundImage: "linear-gradient(120deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%)"}
+
+  const accordion = data.map((item, index)=>{
+    return(
+      <div key={index} className="my-1 border-b-2 w-11/12 mx-auto">
+        <div className="border-b-2 border-gray-300"> 
+        <div className="flex justify-between" onClick={()=>onClickHandler(index)}>
+          <p className={`${selected === index ? "font-bold" : "text-md"} pb-3`}>{item.question}</p>
+          <p>{selected === index ? "-" : "+"}</p>
+        </div>
+         
+        <p className={`${selected === index ? "block" : "hidden"}`}>{item.answer}</p>
+        </div>
+      </div>
+    )
+  })
+
   return (
-    // makes sure the container is centered horizontally and vertically
-    <div className="bg-blue-900 h-screen pt-20 flex flex-col justify-center items-center ">
-      <div className="bg-gray-200 p-10 rounded-xl pt-24">
-        <div className="relative -mt-52">
-          <img  className=" border-2 border-yellow-900 shadow" src="\images\faq-accordion\illustration-woman-online-mobile.svg"></img>
+    <div style={bgGradient} className=" pt-40 pb-20">
+      <div className="bg-gray-200 max-w-sm border-2 mx-auto rounded-3xl shadow-2xl pt-28 pb-8 md:max-w-xl">
+        <div className ="relative"> 
+          <img className=" -mt-52 absolute left-1/2 transform -translate-x-1/2" src="\images\faq-accordion\illustration-woman-online-mobile.svg"></img>
+          <img className="absolute -mt-46 left-1/2 transform -translate-x-1/2 -top-24" src="\images\faq-accordion\bg-pattern-mobile.svg"/>
+          <p className="text-center font-bold text-4xl mb-8 tracking-wider">FAQ</p>
         </div>
-        <div className="text-center">
-          <p className="text-3xl font-bold p-8">FAQ</p>
-          <div>
-            {data.map((item, index)=>{
-              return(
-                <div className="my-1 border-b-2 flex">
-                  <div onClick={()=>onClickHandler(index)}>
-                    <p className={`${selected === index ? "text-bold" : "text-md"} border-b-2 border-gray-400`}>{item.question}</p>
-                    <p className={selected === index ? "block" : "hidden"}>{item.answer}</p>
-                  </div>
-                  <div>
-                    <p className="hidden">ICON</p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+         
+        {accordion}
+
       </div>
     </div>
   )
@@ -55,7 +57,11 @@ const data = [
     answer: "No more than 2GB. All files in your account must fit your alloted storage space"
   },
   {
-    question: "What is the maximum file upload size?",
+    question: "How do I reset my password",
+    answer: "No more than 2GB. All files in your account must fit your alloted storage space"
+  },
+  {
+    question: "Can I cancel my subscription?",
     answer: "No more than 2GB. All files in your account must fit your alloted storage space"
   },
   {
@@ -63,7 +69,7 @@ const data = [
     answer: "No more than 2GB. All files in your account must fit your alloted storage space"
   },
   {
-    question: "What is the maximum file upload size?",
+    question: "Do you provide additional support?",
     answer: "No more than 2GB. All files in your account must fit your alloted storage space"
   }
 ]
