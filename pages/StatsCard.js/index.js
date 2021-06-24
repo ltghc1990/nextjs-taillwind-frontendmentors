@@ -1,10 +1,10 @@
-import React from 'react'
-import StatsCard from "../../components/StatsCard"
+import React from "react";
+import StatsCard from "../../components/StatsCard";
 // DEFAULT
 // const Components = () => {
 //   return (
 //     <div>
-//       <StatsCard 
+//       <StatsCard
 //         title="Get insights that help your business grow."
 //         description="Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency."
 //         threeCol={
@@ -15,28 +15,29 @@ import StatsCard from "../../components/StatsCard"
 //   )
 // }
 
-const Components = ({title, description, threeCol, image}) => {
+const HomePage = ({ title, description, threeCol, image }) => {
   return (
     <div>
-      <StatsCard 
+      <StatsCard
         title={title}
         description={description}
         threeCol={threeCol}
-        image={image}/>
+        image={image}
+      />
     </div>
-  )
-}
+  );
+};
 
+export default HomePage;
 
-export default Components
-
-export async function getStaticProps(){
-  return{
-    props:{
+export async function getStaticProps() {
+  return {
+    props: {
       title: "Get insights that help your business grow.",
-      description: "Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.",
-      threeCol: ["10k+ companies","314 templates", "12mil+ queries"],
+      description:
+        "Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.",
+      threeCol: ["10k+ companies", "314 templates", "12mil+ queries"],
       image: "/images/image-header-desktop.jpg",
-    }
-  }
+    },
+  };
 }

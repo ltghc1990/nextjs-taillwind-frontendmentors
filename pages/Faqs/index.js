@@ -1,12 +1,12 @@
-import React from 'react'
-import FaqsAccordion from "../../components/FaqsAccordion"
+import React from "react";
+import FaqsAccordion from "../../components/FaqsAccordion";
 
 const Faqs = () => {
   return (
     <div>
-      <FaqsAccordion/>
+      <FaqsAccordion />
     </div>
-  )
-}
+  );
+};
 
-export default Faqs
+export default Faqs;

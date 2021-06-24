@@ -1,19 +1,16 @@
-import React from 'react'
-import Link from "next/link"
+import React from "react";
+import Link from "next/link";
 
 const Button = (props) => {
-  if(props.link){
+  if (props.link) {
     return (
       <Link href={props.link}>
         <a {...props}>{props.children}</a>
       </Link>
-    )
+    );
   } else {
-    return(
-      <button {...props}>{props.children}</button>
-    )
+    return <button {...props}>{props.children}</button>;
   }
-   
-}
+};
 
-export default Button
+export default Button;
