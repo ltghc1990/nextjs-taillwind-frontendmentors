@@ -3,7 +3,10 @@ import Button from "../../ui/Button";
 
 const MiniNav = () => {
   return (
-    <div className="flex container mx-auto space-x-6 py-2 my-4">
+    <div
+      className="flex container mx-auto space-x-6 py-2 my-4"
+      style={{ backgroundColor: "blue" }}
+    >
       <Button className="text-red-500 font-medium">About</Button>
       <Button className="font-semibold">Jobs</Button>
     </div>
