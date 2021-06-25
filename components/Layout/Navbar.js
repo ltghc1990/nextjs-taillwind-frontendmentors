@@ -20,6 +20,11 @@ const Navbar = () => {
             Faqs Page
           </Button>
         </div>
+        <div>
+          <Button className="btn bg-red-500 text-gray-100" link="/Ableton">
+            Ableton Page
+          </Button>
+        </div>
       </div>
     </div>
   );
