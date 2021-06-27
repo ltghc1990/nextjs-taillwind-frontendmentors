@@ -12,8 +12,8 @@ const StatsCard = ({ title, description, threeCol, image }) => {
 
   return (
     <div className="bg-cardBg container mx-auto md:flex text-white items-center">
-      <div className="md:w-1/2">
-        <img className="w-full h-full object-cover" src={image}></img>
+      <div className="w-full md:w-1/2  ">
+        <img className="object-cover w-full" src={image}></img>
       </div>
       <div className="px-10 py-8 text-center md:w-1/2 md:text-left lg:p-20 xl:p-32">
         <h1 className="text-3xl text-gray-100 font-bold mb-4 lg:text-4xl">
@@ -26,7 +26,7 @@ const StatsCard = ({ title, description, threeCol, image }) => {
             <p className="text-gray-400 uppercase text-xs"></p>
           </div>
           <div className="w-2/6 py-3">
-            <p className="text-xl font-bold">314</p>
+            <p className="text-xl font-bold">314+</p>
             <p className="text-gray-400 uppercase text-xs">templates</p>
           </div>
           <div className="w-2/6 py-3">
