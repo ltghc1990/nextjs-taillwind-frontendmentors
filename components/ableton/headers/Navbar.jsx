@@ -14,9 +14,10 @@ const AbletonNavbar = () => {
   const toggleAccordion = () => {
     setToggle(!toggle);
   };
-  const navLinks = links.map((link) => {
+  const navLinks = links.map((link, index) => {
     return (
       <Button
+        key={index}
         className="font-semibold"
         href={link.link}
         onClick={() => setShowMenu(!showMenu)}
@@ -43,7 +44,7 @@ const AbletonNavbar = () => {
           </Button>
 
           <ul
-            className={`"hidden md:static md:flex md:h-auto flex-col md:flex-row space-x-4 lg:space-x-6 ${
+            className={`"hidden flex-col md:static md:flex md:h-auto md:bg-white md:flex-row space-x-4 lg:space-x-6 ${
               showMenu
                 ? "flex absolute top-full z-50 bg-gray-400 h-screen w-full -left-4"
                 : "hidden"
