@@ -25,6 +25,11 @@ const Navbar = () => {
             Ableton Page
           </Button>
         </div>
+        <div>
+          <Button className="btn bg-green-500 text-gray-100" link="/Framer">
+            Framer Page
+          </Button>
+        </div>
       </div>
     </div>
   );
