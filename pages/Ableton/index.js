@@ -5,7 +5,7 @@ import MiniNav from "../../components/ableton/headers/MiniNav";
 import Hero from "../../components/main/Hero";
 import { TwoColumn } from "../../components/main/TwoColumn";
 import Quote from "../../components/main/Quote";
-import HorizontalSpacing from "../../components/Layout/horizontalSpacing";
+import HorizontalPadding from "../../components/Layout/HorizontalPadding";
 import Head from "../../components/Metatags";
 
 const AbletonHomePage = () => {
@@ -20,12 +20,12 @@ const AbletonHomePage = () => {
         <AbletonNavbar />
         <MiniNav />
         <Hero h1="Ableton" />
-        <HorizontalSpacing />
+        <HorizontalPadding />
         <Quote
           h4="Rather than having a one-size-fits-all process, we try to give our people what they need to work their magic and grow. We’ve learned that achieving the best results comes from building teams that are richly diverse, and thus able to explore problems from a wider set of perspectives. We don’t always agree with each other, but opinion and debate are valued and openly encouraged."
           p="We believe it takes focus to create truly outstanding instruments. We only work on a few products and we strive to make them great."
         />
-        <HorizontalSpacing />
+        <HorizontalPadding />
         <TwoColumn
           image="/images/ableton/photo8.jpg"
           content={{
@@ -33,7 +33,7 @@ const AbletonHomePage = () => {
             link: { href: "/", text: "See all lastest jobs" },
           }}
         />
-        <HorizontalSpacing />
+        <HorizontalPadding />
         <Quote
           h4="If you're joining us in Berlin, we'll help with relocation and
             paperwork. We’ll even provide you with free German or English
@@ -47,7 +47,7 @@ const AbletonHomePage = () => {
             exceptional talent from around the world, we will do everything we
             can to make your transition as easy as possible."
         />
-        <HorizontalSpacing />
+        <HorizontalPadding />
       </Background>
     </div>
   );
