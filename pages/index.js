@@ -8,7 +8,6 @@ import Example from "../components/Layout/tailwindNavbar";
 export default function Home() {
   return (
     <div className="mx-auto">
-      <h1 className="bg-blue-300">Hello World</h1>
       <Example />
       <NavbarTest />
     </div>
